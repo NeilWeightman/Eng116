@@ -1,10 +1,7 @@
 package com.sparta.duplicates.test;
 
 import com.sparta.duplicates.DuplicateCounter;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 public class DuplicateCounterTest {
     private static DuplicateCounter dup;
@@ -15,8 +12,9 @@ public class DuplicateCounterTest {
     @Test
     public void testNormalString(){
         char[] result = dup.findDuplicates("Neil Weightman");
-        char[] expected = {'e', 'i', 'n'};
-        Assertions.assertArrayEquals(expected, result);
+        char[] expected = {'e', 'i', 'z'};
+        throw new RuntimeException("Eek");
+//        Assertions.assertArrayEquals(expected, result);
     }
     @Test
     public void testEmptyString(){
@@ -24,4 +22,9 @@ public class DuplicateCounterTest {
         char[] expected = {};
         Assertions.assertArrayEquals(expected, result);
     }
+    @Test
+    public void testSomething(){
+        Assertions.fail("Not implemented yet");
+    }
+
 }
