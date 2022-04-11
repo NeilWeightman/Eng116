@@ -6,7 +6,8 @@ public class EnumDriver {
     public enum Day {
         MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY
     }
-//    public static final int MONDAY = 0;
+
+    //    public static final int MONDAY = 0;
 //    public static final int TUESDAY = 1;
 //    public static final int WEDNESDAY = 2;
 //    public static final int THURSDAY = 3;
@@ -17,15 +18,12 @@ public class EnumDriver {
         Scanner scan = new Scanner(System.in);
         // we should add some exception handling here
         Day dayOfWeek = Day.valueOf(scan.next().toUpperCase());
-        if(dayOfWeek.equals(Day.MONDAY))
+        if (dayOfWeek.equals(Day.MONDAY))
             System.out.println("It's Monday :-(");
         switch (dayOfWeek) {
-            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY
-                    -> System.out.println("It's a week day");
-            case SATURDAY, SUNDAY
-                    -> System.out.println("It's the weekend!");
-            default
-                    -> System.out.println("Invalid day");
+            case MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY -> System.out.println("It's a week day");
+            case SATURDAY, SUNDAY -> System.out.println("It's the weekend!");
+            default -> System.out.println("Invalid day");
         }
     }
 }
