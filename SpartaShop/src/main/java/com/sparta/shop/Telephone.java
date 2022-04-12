@@ -5,7 +5,9 @@ public class Telephone extends Item {
     private String modelName;
 
     public Telephone(String prodId, double price, char colour) {
-        super(prodId, price, colour);
+        setProductId(prodId);
+        setPrice(price);
+        setColour(colour);
     }
     public String getBrand() {
         return brand;
@@ -32,5 +34,10 @@ public class Telephone extends Item {
                 ", brand='" + brand + '\'' +
                 ", modelName='" + modelName + '\'' +
                 '}';
+    }
+
+    @Override
+    public double getVatRate() {
+        return 0.1;
     }
 }

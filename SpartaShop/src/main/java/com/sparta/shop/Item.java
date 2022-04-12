@@ -1,26 +1,11 @@
 package com.sparta.shop;
 
-public class Item {
+public abstract class Item {
     // instance variables
     private String productId;
     private double price;
     // primitive types are initialised to 0 (int, float), '\0' (char) or false (boolean)
     private char colour;
-
-    public Item(String prodId, double price, char colour) {
-        this.price = price;
-        productId = prodId;
-        this.colour = colour;
-    }
-
-    @Override
-    public String toString() {
-        return "Item{" +
-                "productId='" + productId + '\'' +
-                ", price=" + price +
-                ", colour=" + colour +
-                '}';
-    }
 
     public String getProductId() {
         return productId;
@@ -41,11 +26,18 @@ public class Item {
             this.price = price;
     }
 
+    // this method isn't defined here, but MUST be defined in subclasses
+    public abstract double getVatRate();
+
     public char getColour() {
         return colour;
     }
 
     public void setColour(char colour) {
         this.colour = colour;
+    }
+
+    public final String sayHello(){
+        return "Hello, there!";
     }
 }

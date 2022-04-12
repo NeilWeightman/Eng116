@@ -7,7 +7,9 @@ public class Shirt extends Item {
     private String size;
 
     public Shirt(String prodId, double price, String designName, String size, char colour) {
-        super(prodId, price, colour);
+        setProductId(prodId);
+        setPrice(price);
+        setColour(colour);
         this.designName = designName;
         this.size = size;
     }
@@ -74,5 +76,10 @@ public class Shirt extends Item {
     public double getPriceWithTax(){
         // assuming VAT is 20%
         return this.getPrice() * 1.2;
+    }
+
+    @Override
+    public double getVatRate() {
+        return 0.2;
     }
 }
