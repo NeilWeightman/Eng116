@@ -1,23 +1,58 @@
 package com.sparta.shop;
 
-public class Shirt {
-    // instance variables
-    private double price;
+// implicitly inherits directly from java.lang.Object
+public class Shirt extends Item {
     // object instance variables are initialised to null
     private String designName;
     private String size;
-    // primitive types are initialised to 0 (int, float), '\0' (char) or false (boolean)
-    private char colour;
 
-    public double getPrice() {
-        return price;
+    public Shirt(String prodId, double price, String designName, String size, char colour) {
+        super(prodId, price, colour);
+        this.designName = designName;
+        this.size = size;
     }
 
-    public void setPrice(double price) {
-        if(price < 0.0)
-            this.price = 0.0;
-        else
-            this.price = price;
+    public Shirt() {
+        // use the existing most general ctor
+        // ctor chaining
+        this("123", 0.0, "Dummy Design", "-", '-');
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        // cast o to a Shirt
+        Shirt shirt = (Shirt) o;
+
+        if (Double.compare(shirt.getPrice(), getPrice()) != 0) return false;
+        if (getColour() != shirt.getColour()) return false;
+        if (getProductId() != null ? !getProductId().equals(shirt.getProductId()) : shirt.getProductId() != null) return false;
+        if (designName != null ? !designName.equals(shirt.designName) : shirt.designName != null) return false;
+        return size != null ? size.equals(shirt.size) : shirt.size == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result;
+        long temp;
+        result = getProductId() != null ? getProductId().hashCode() : 0;
+        temp = Double.doubleToLongBits(getPrice());
+        result = 31 * result + (int) (temp ^ (temp >>> 32));
+        result = 31 * result + (designName != null ? designName.hashCode() : 0);
+        result = 31 * result + (size != null ? size.hashCode() : 0);
+        result = 31 * result + (int) getColour();
+        return result;
+    }
+
+    public String toString() {
+        return "Shirt #" + getProductId() + " { " +
+                "price=" + getPrice() +
+                " (with tax) " + getPriceWithTax() +
+                ", designName='" + designName + '\'' +
+                ", size='" + size + '\'' +
+                ", colour=" + getColour() +
+                " }";
     }
 
     public String getDesignName() {
@@ -36,16 +71,8 @@ public class Shirt {
         this.size = size;
     }
 
-    public char getColour() {
-        return colour;
-    }
-
-    public void setColour(char colour) {
-        this.colour = colour;
-    }
-
     public double getPriceWithTax(){
         // assuming VAT is 20%
-        return this.price * 1.2;
+        return this.getPrice() * 1.2;
     }
 }
