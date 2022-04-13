@@ -1,11 +1,15 @@
 package com.sparta.shop;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HexFormat;
-import java.util.List;
+import java.util.*;
 
 public class ShopFront {
+    // nested (inner) class
+    private static class MyItemComparator implements Comparator<Item> {
+        @Override
+        public int compare(Item o1, Item o2) {
+            return (int)(o2.getPrice() - o1.getPrice());
+        }
+    }
     public static void main(String[] args) {
         List<Item> shoppingBasket = new ArrayList<>();
 
@@ -17,7 +21,18 @@ public class ShopFront {
         for(Item theItem: shoppingBasket)
             System.out.println(theItem);
         // why does this not work atm
-        Collections.sort(shoppingBasket);
+        // Collections.sort(shoppingBasket);
+//        shoppingBasket.sort(new MyItemComparator());
+        // an anonymous inner class
+//        shoppingBasket.sort(new Comparator<Item>() {
+//            @Override
+//            public int compare(Item o1, Item o2) {
+//                return (int)(o2.getPrice() - o1.getPrice());
+//            }
+//        });
+        // lambda version
+        shoppingBasket.sort((o1, o2) -> (int)(o2.getPrice() - o1.getPrice()));
+        System.out.println(shoppingBasket);
 
         List<String> nameList = new ArrayList<>(
                 List.of("Reman", "Michel", "Idriss",
@@ -25,6 +40,17 @@ public class ShopFront {
         // when this does?
         Collections.sort(nameList);
         System.out.println(nameList);
+        List<Printable> printList = new ArrayList<>();
+        Item i = new Shirt();
+        printList.add(i);
+        Customer c = new Customer();
+        printList.add(c);
+        Printable p = printList.get(0);
+        p.print();
+        // can access other features of the object by casting
+        // risky, because you're turning off the type checking
+        System.out.println(((Shirt)p).getPrice());
+
 //        basicClassUsage();
     }
 
