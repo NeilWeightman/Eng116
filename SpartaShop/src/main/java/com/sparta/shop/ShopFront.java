@@ -18,6 +18,8 @@ public class ShopFront {
 //        shoppingBasket.add(i);
         shoppingBasket.add(new Shirt("0001", 12.01, "Summer", "XL", 'r'));
         shoppingBasket.add(new Telephone("T001", 123.45, 'g'));
+        // can't do this
+//        shoppingBasket.add(new Customer());
         for(Item theItem: shoppingBasket)
             System.out.println(theItem);
         // why does this not work atm

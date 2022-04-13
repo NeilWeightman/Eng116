@@ -14,6 +14,11 @@ public class InterfaceExample {
             System.out.println("Idriss is in the list!");
         nameList.remove("Michel");
         System.out.println(nameList);
+
+        // how can this compile?
+        // A extends B
+        // A implements B
+//        B b = new A();
     }
 
     private static List<String> getNameList() {
