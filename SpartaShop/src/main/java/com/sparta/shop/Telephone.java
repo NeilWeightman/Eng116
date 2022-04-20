@@ -9,6 +9,11 @@ public class Telephone extends Item {
         setPrice(price);
         setColour(colour);
     }
+
+    public Telephone() {
+
+    }
+
     public String getBrand() {
         return brand;
     }
