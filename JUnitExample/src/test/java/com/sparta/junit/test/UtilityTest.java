@@ -37,9 +37,4 @@ class UtilityTest {
         System.out.println("In the test method for square()");
         Assertions.assertEquals(square, actual);
     }
-    private static Stream<Arguments> getValues() {
-        return Stream.of(
-                Arguments.arguments(List.)
-        );
-    }
 }
