@@ -27,6 +27,18 @@ class FizzBuzzTest {
         String result = theObject.fizzBuzz(2);
         String expected = "2";
         Assertions.assertEquals(expected, result);
-
     }
+    @Test
+    void fizzBuzzTestTwelve() {
+        String result = theObject.fizzBuzz(12);
+        String expected = "Fizz";
+        Assertions.assertEquals(expected, result);
+    }
+    @Test
+    void fizzBuzzTestTen() {
+        String result = theObject.fizzBuzz(10);
+        String expected = "Buzz";
+        Assertions.assertEquals(expected, result);
+    }
+
 }
