@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7db5e92-c7c6-48af-8df8-560b0006c180" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/City.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/CityDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/DAODriver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/ConnectionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/ConnectionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/JDBCDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sparta/sakila/JDBCDriver.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +43,27 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\NeilWeightman\Documents\GitHub\Eng116\JDBCExample" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DAODriver">
+    <configuration name="DAODriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sparta.sakila.DAODriver" />
+      <module name="JDBCExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparta.sakila.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="JDBCDriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sparta.sakila.JDBCDriver" />
       <module name="JDBCExample" />
@@ -65,6 +79,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DAODriver" />
         <item itemvalue="Application.JDBCDriver" />
       </list>
     </recent_temporary>
@@ -77,7 +92,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1650977827833</updated>
-      <workItem from="1650977830322" duration="4535000" />
+      <workItem from="1650977830322" duration="7384000" />
     </task>
     <servers />
   </component>
