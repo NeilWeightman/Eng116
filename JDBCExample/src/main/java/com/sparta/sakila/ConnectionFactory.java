@@ -39,4 +39,13 @@ public class ConnectionFactory {
         }
         connection = null;
     }
+    public static String getInsertSQL(){
+        Properties dbProps = new Properties();
+        try {
+            dbProps.load(new FileReader("database.properties"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return dbProps.getProperty("db.sql.insert");
+    }
 }
