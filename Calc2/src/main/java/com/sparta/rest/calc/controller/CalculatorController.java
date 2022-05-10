@@ -1,12 +1,31 @@
 package com.sparta.rest.calc.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.sparta.rest.calc.entities.CalcParams;
+import com.sparta.rest.calc.entities.CalcResult;
+import com.sparta.rest.calc.entities.Customer;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CalculatorController {
     @GetMapping(value="/sayhi")
-    public String sayHi(){
-        return "Hello from Spring!!!";
+    public Customer sayHi(@RequestParam String firstName,
+                        @RequestParam String lastName,
+                        @RequestParam int id){
+        Customer cust = new Customer(firstName, lastName, id);
+        return cust;
+    }
+
+    @GetMapping(value="add")
+    public CalcResult add(@RequestParam int first, @RequestParam int second){
+        CalcResult result = new CalcResult(first, second,
+                "add", first + second);
+        return result;
+    }
+
+    @PostMapping(value="add")
+    public CalcResult addPost(@RequestBody CalcParams params){
+        CalcResult result = new CalcResult(params.getParam1(), params.getParam2(),
+                "add", params.getParam1() + params.getParam2());
+        return result;
     }
 }
