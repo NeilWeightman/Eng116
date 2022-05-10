@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b7db5e92-c7c6-48af-8df8-560b0006c180" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/sparta/sakila/CityDAOTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,11 +18,20 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="28KuuovUgIIEK1PXeNzcgg8NXt5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -36,18 +47,27 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../calculator" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="vcs.Perforce" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\NeilWeightman\Documents\GitHub\Eng116\JDBCExample" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.sparta.sakila" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.DAODriver">
+  <component name="RunManager" selected="JUnit.CityDAOTest">
     <configuration name="DAODriver" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sparta.sakila.DAODriver" />
       <module name="JDBCExample" />
@@ -74,8 +94,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CityDAOTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBCExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparta.sakila.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sparta.sakila" />
+      <option name="MAIN_CLASS_NAME" value="com.sparta.sakila.CityDAOTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CityDAOTest.getCityById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JDBCExample" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sparta.sakila.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.sparta.sakila" />
+      <option name="MAIN_CLASS_NAME" value="com.sparta.sakila.CityDAOTest" />
+      <option name="METHOD_NAME" value="getCityById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CityDAOTest" />
+        <item itemvalue="JUnit.CityDAOTest.getCityById" />
         <item itemvalue="Application.DAODriver" />
         <item itemvalue="Application.JDBCDriver" />
       </list>
@@ -91,6 +144,9 @@
       <updated>1650977827833</updated>
       <workItem from="1650977830322" duration="7384000" />
       <workItem from="1651133753521" duration="1335000" />
+      <workItem from="1651672626454" duration="2080000" />
+      <workItem from="1652092046499" duration="897000" />
+      <workItem from="1652169616290" duration="636000" />
     </task>
     <servers />
   </component>
@@ -107,5 +163,13 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/JDBCExample$CityDAOTest_getCityById.ic" NAME="CityDAOTest.getCityById Coverage Results" MODIFIED="1651672791628" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sparta.sakila.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/JDBCExample$CityDAOTest.ic" NAME="CityDAOTest Coverage Results" MODIFIED="1651677161077" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.sparta.sakila.*</FILTER>
+    </SUITE>
   </component>
 </project>
