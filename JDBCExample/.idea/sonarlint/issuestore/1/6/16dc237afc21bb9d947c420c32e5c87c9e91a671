@@ -1,0 +1,7 @@
+
+j
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(Ôêå‹úÿÿÿÿ
+e
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(äïÓê
+S	java:S106"9Replace this use of System.out or System.err by a logger.(úÉ•¿üÿÿÿÿ
+V	java:S125"<This block of commented-out lines of code should be removed.(Ş–ªÇùÿÿÿÿ

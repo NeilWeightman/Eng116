@@ -1,0 +1,13 @@
+
+f
+java:S3655"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(–Ð·ä
+7
+java:S3864"!Remove this use of "Stream.peek".(ßˆ±ö
+V	java:S125"<This block of commented-out lines of code should be removed.(®ãŽŽýÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(ßˆ±ö
+S	java:S106"9Replace this use of System.out or System.err by a logger.(®óªÅÿÿÿÿÿ
+N	java:S106"9Replace this use of System.out or System.err by a logger.(–Ð·ä
+O
+java:S1128"9Remove this unused import 'java.util.function.Predicate'.(ïÍ–¶
+R
+java:S1128"7Remove this unused import 'java.util.stream.IntStream'.(ÙÉ½Ÿùÿÿÿÿ

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Film Details</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+<h1>The Film Details</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tr>
+        <td th:text="${filmAttr.id}"></td>
+        <td th:text="${filmAttr.title}"></td>
+        <td th:text="${filmAttr.description}"></td>
+    </tr>
+</table>
+</body>
+</html>

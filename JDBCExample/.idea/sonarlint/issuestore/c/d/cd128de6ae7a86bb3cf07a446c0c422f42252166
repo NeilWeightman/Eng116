@@ -1,0 +1,35 @@
+
+†
+java:S1319!"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¤¥ïü
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÇòÒıÿÿÿÿ
+k	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Ãµ”ÿÿÿÿÿ
+b
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ë«Æşûÿÿÿÿ
+I
+java:S1172
+".Remove this unused method parameter "newCity".(€æ¸‚øÿÿÿÿ
+=
+java:S1125"'Remove the unnecessary boolean literal.(õÇø•
+A
+java:S1168""+Return an empty collection instead of null.(¥¹ï
+I
+java:S1172$".Remove this unused method parameter "city_id".(»Ãµ”ÿÿÿÿÿ
+N
+java:S1172'"3Remove this unused method parameter "newCityState".(’îôšÿÿÿÿÿ
+†
+java:S1319!"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(¤¥ïü
+k	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÇòÒıÿÿÿÿ
+k	java:S117$"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»Ãµ”ÿÿÿÿÿ
+b
+java:S2095"GUse try-with-resources or close this "Statement" in a "finally" clause.(Ë«Æşûÿÿÿÿ
+I
+java:S1172
+".Remove this unused method parameter "newCity".(€æ¸‚øÿÿÿÿ
+=
+java:S1125"'Remove the unnecessary boolean literal.(õÇø•
+A
+java:S1168""+Return an empty collection instead of null.(¥¹ï
+I
+java:S1172$".Remove this unused method parameter "city_id".(»Ãµ”ÿÿÿÿÿ
+N
+java:S1172'"3Remove this unused method parameter "newCityState".(’îôšÿÿÿÿÿ
