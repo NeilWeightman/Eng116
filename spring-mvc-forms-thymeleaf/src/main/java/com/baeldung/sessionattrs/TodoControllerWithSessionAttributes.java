@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
-@RequestMapping("/sessionattributes")
 @SessionAttributes("todos")
 public class TodoControllerWithSessionAttributes {
 
@@ -47,5 +46,15 @@ public class TodoControllerWithSessionAttributes {
     @ModelAttribute("todos")
     public TodoList todos() {
         return new TodoList();
+    }
+
+    @GetMapping("/accessDenied")
+    public String getAccessDeniedPage(){
+        return "accessDenied";
+    }
+
+    @GetMapping("/login")
+    public String getLoginPage(){
+        return "login";
     }
 }

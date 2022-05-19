@@ -5,6 +5,10 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.core.Ordered;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.annotation.SessionScope;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -15,14 +19,9 @@ import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 import org.thymeleaf.templateresolver.ITemplateResolver;
 
 @EnableWebMvc
+@EnableWebSecurity
 @Configuration
-public class Config implements WebMvcConfigurer {
-
-    @Override
-    public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("index");
-        registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
-    }
+public class Config extends WebSecurityConfigurerAdapter {
 
     @Bean
     @Scope(
@@ -41,5 +40,22 @@ public class Config implements WebMvcConfigurer {
         resolver.setTemplateMode(TemplateMode.HTML);
         resolver.setCharacterEncoding("UTF-8");
         return resolver;
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        // creates an in-memory user registry
+        auth.inMemoryAuthentication().withUser("Tina").password("{noop}secret123").authorities("ADMIN");
+        auth.inMemoryAuthentication().withUser("Reman").password("{noop}passw0rd").authorities("USER");
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.authorizeRequests()
+                .antMatchers("/form").hasAnyAuthority("ADMIN")
+                .antMatchers("/todos").permitAll()
+                .anyRequest().authenticated()
+                .and().formLogin().loginPage("/login").defaultSuccessUrl("/todos", true).permitAll()
+                .and().exceptionHandling().accessDeniedPage("/accessDenied");
     }
 }

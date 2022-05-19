@@ -16,7 +16,7 @@
     	</div>
         <div class="container">
             <h5>Enter a TODO</h5>
-                <form action="#" th:action="@{/sessionattributes/form}" th:object="${todo}" method="post">
+                <form action="#" th:action="@{/form}" th:object="${todo}" method="post">
                 	<div class="input-group">
                 		<input type="text" th:field="*{description}" class="form-control" placeholder="TODO" required autofocus/>
 						<button class="btn btn-sm btn-primary form-control text-center" type="submit" style="max-width: 80px;">Create</button>
